@@ -1191,8 +1191,6 @@ body {
     margin-left: 8.33333%; } }
 /* Basic */
 body {
-  background-color: #e8e8e8;
-  background-image: url("images/bg02.png");
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #565656; }
@@ -1453,8 +1451,6 @@ article > ol {
     text-align: center;
     text-decoration: none;
     color: inherit;
-    background-color: #e8e8e8;
-    background-image: url("images/bg02.png");
     color: #565656;
     margin: 0 0.4em 0 0;
     border-radius: 0.4em;
@@ -1751,9 +1747,7 @@ article > ol {
 
 /* Content */
 #content {
-  position: relative;
-  background-color: #fff;
-  background-image: url("images/bg02.png"); }
+  position: relative; }
   #content > .inner {
     position: relative;
     z-index: 1; }
@@ -1933,8 +1927,6 @@ article > ol {
     position: absolute;
     width: 5.5em;
     overflow: hidden;
-    background-color: #fff;
-    background-image: url("images/bg02.png");
     left: -10.5em;
     top: 0;
     padding: 1.5em 1em 1.5em 1em;

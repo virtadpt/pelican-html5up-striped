@@ -38,6 +38,22 @@
         {% if TAG_FEED_RSS and tag %}
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
+        <style>
+        body, .pagination .pages a {
+          {% if CSS_DARK_BACKGROUND %}
+            background: {{ CSS_DARK_BACKGROUND }}
+          {% else %}
+            background: #e8e8e8 url("{{ SITEURL }}/theme/assets/css/images/bg02.png");
+          {% endif %}
+        }
+        #content, .box.post .info {
+          {% if CSS_LIGHT_BACKGROUND %}
+            background: {{ CSS_LIGHT_BACKGROUND }}
+          {% else %}
+            background: #fff url("{{ SITEURL }}/theme/assets/css/images/bg02.png");
+          {% endif %}
+        }
+        </style>
         {% endblock head %}
     </head>
     <body>
