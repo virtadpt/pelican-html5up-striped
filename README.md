@@ -4,7 +4,7 @@ Theme features and enhancements:
 
 1. Contains tag cloud (via `tag_cloud` Pelican plugin). Can be disabled by setting `DISPLAY_TAGS_ON_SIDEBAR=False`.
 2. Support for avatar specified by `PROFILE_IMG_URL` configuration setting.
-3. Support for Disqus, `DISQUS_SITENAME` should be set in configuration.
+3. Support for Disqus & Isso comments, `DISQUS_SITENAME` / `ISSO_BASE_URL` should be set in configuration.
 4. Support for Google Analytics, `GOOGLE_ANALYTICS` should be set in configuration.
 5. Support for Google site verification by HTML tag, `GOOGLE_SITE_VERIFICATION` should be set in configuration.
 6. Articles can contain header image which is shown on index pages and ignored in article. Image is specified with `image` file metadata.
