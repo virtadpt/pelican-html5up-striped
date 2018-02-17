@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/main.css" />
         <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/pygment-default.css" />
         <!--[if lte IE 8]><link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/ie8.css" /><![endif]-->
+        {% if NOINDEX %}
+        <meta name="robots" content="noindex">
+        {% endif %}
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
         {% endif %}

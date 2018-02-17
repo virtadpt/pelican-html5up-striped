@@ -9,6 +9,7 @@ Theme features and enhancements:
 5. Support for Google site verification by HTML tag, `GOOGLE_SITE_VERIFICATION` should be set in configuration.
 6. Articles can contain header image which is shown on index pages and ignored in article. Image is specified with `image` file metadata.
 7. Pages can redirect to other locations. Useful if you want to add some external link to main rubricator. Location is specified with `redirect` file metadata.
+8. In order for the website to NOT be indexed by search engines, you can set `NOINDEX = True`
 
 
 ## License
