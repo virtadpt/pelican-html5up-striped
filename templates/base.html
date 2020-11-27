@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
+
 <!--
     Striped by HTML5 UP
     html5up.net | @n33co
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
   -->
+
 <html lang="{{ DEFAULT_LANG }}">
     <head>
         {% block head %}
@@ -14,33 +16,17 @@
         <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/main.css" />
         <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/pygment-default.css" />
         <!--[if lte IE 8]><link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/ie8.css" /><![endif]-->
-        {% if NOINDEX %}
-        <meta name="robots" content="noindex">
-        {% endif %}
+
+        <!-- Feeds -->
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
         {% endif %}
+
         {% if FEED_ALL_RSS %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
         {% endif %}
-        {% if FEED_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
-        {% endif %}
-        {% if FEED_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-        {% endif %}
-        {% if CATEGORY_FEED_ATOM and category %}
-        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(slug=category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
-        {% endif %}
-        {% if CATEGORY_FEED_RSS and category %}
-        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(slug=category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
-        {% endif %}
-        {% if TAG_FEED_ATOM and tag %}
-        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(slug=tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
-        {% endif %}
-        {% if TAG_FEED_RSS and tag %}
-        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(slug=tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
-        {% endif %}
+
+        <!-- Last minute CSS -->
         <style>
         body, .pagination .pages a {
           {% if CSS_DARK_BACKGROUND %}
@@ -59,6 +45,7 @@
         </style>
         {% endblock head %}
     </head>
+
     <body>
 
         <!-- Content -->
@@ -80,47 +67,44 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul>
-                    {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}">{{ title }}</a></li>
-                    {% endfor %}
-                    {% if DISPLAY_CATEGORIES_ON_MENU %}
-                    {% for cat, null in categories %}
-                    <li{% if cat == category %} class="current"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                    {% endfor %}
-                    {% endif %}
-                    {% if DISPLAY_PAGES_ON_MENU %}
-                    {% for p in pages %}
-                    <li{% if p == page %} class="current"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-                    {% endfor %}
-                    {% endif %}
+                <li><a href="/pages/about-me">About Me</a></li>
+                <li><a href="/drwho.plan">.plan file</a></li>
+                <li><a href="https://ko-fi.com/virtadpt">Coffee?</a></li>
+                <li><a href="/pages/social">Social Networks</a></li>
+                <li><a href="/pages/people">People I Follow</a></li>
+                <li><a href="/pages/stuff-i-like">Stuff I Like</a></li>
+                <li><a href="/pages/site">Things About This Site</a></li>
+                <li><a href="/pages/syndication">Syndication</a></li>
                 </ul>
+
+                <hr>
+
+                <ul>
+                <li><a href="/pages/turtles-all-the-way-down">Turtles All the Way Down</a></li>
+                <li><a href="/pages/everything-i-need-to-know-in-life-i-learned-from-reading-william-gibson-novels">Everything I need to Know In Life, I Learned from Reading William Gibson Novels</a></li>
+                <li><a href="/pages/laws">The Laws of the Twenty-First Century</a></li>
+                <li><a href="/pages/exocortex">Exocortex Resource</a></li>
+                <li><a href="/pages/a-friendly-introduction-to-the-fediverse">A Friendly Introduction to the Fediverse</a></li>
+                </ul>
+
+                <hr>
+
+                <ul>
+                <li><a href="/pages/edward-c-grejda-rip">Edward C. Grejda</a></li>
+                <li><a href="/pages/helen-wendel-rip">Helen Wendel</a></li>
+                <li><a href="http://crusher.parad.net/">Crusher</a></li>
+                </ul>
+
             </nav>
 
-            <!-- Search -->
-            <!--
-            <section class="box search">
-                <form method="post" action="#">
-                    <input type="text" class="text" name="search" placeholder="Search" />
-                </form>
-            </section>
-            -->
+            <hr>
 
-            {% if DISPLAY_TAGS_ON_SIDEBAR is not defined %}
-            {% set DISPLAY_TAGS_ON_SIDEBAR = True %}
-            {% endif %}
-            {% if 'tag_cloud' in PLUGINS and DISPLAY_TAGS_ON_SIDEBAR %}
-            <!-- Tags -->
-            <section class="box text-style1">
-                <div class="inner">
-                    <header>
-                        <h2>Tags:</h2>
-                    </header>
-                        {% for tag in tag_cloud %}
-                        <a class="tag-{{ tag.1 }}" href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a>
-                        {% endfor %}
-                </div>
+            <!-- Search -->
+            <section class="box search">
+                <iframe src="https://duckduckgo.com/search.html?site=drwho.virtadpt.net&prefill=Search articles?" style="overflow:hidden;margin:0;padding:0;width:200px;height:40px;" frameborder="0"></iframe>
             </section>
-            {% endif %}
+
+            <hr>
 
             <!-- Recent Posts -->
             <!--
@@ -137,49 +121,8 @@
                 </ul>
             </section>
 
-            <hr></hr>
+            <hr>
             -->
-
-            {% if LINKS %}
-            <!-- Blogroll Links -->
-            <section class="box blogroll">
-                <header>
-                    <h2>{{ LINKS_WIDGET_NAME | default('Links') }}</h2>
-                </header>
-                <ul>
-                    {% for name, link in LINKS %}
-                    <li><a href="{{ link }}">{{ name }}</a></li>
-                    {% endfor %}
-                </ul>
-            </section>
-            {% endif %}
-
-            {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
-            <!-- Social Links -->
-            <section class="box social-links">
-                <header>
-                    <h2>{{ SOCIAL_WIDGET_NAME | default('Social') }}</h2>
-                </header>
-                <ul>
-                    {% if FEED_ALL_ATOM %}
-                    <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                    {% endif %}
-                    {% if FEED_ALL_RSS %}
-                    <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">rss feed</a></li>
-                    {% endif %}
-
-                    {% for name, link in SOCIAL %}
-                    {% set name_sanitized = name|lower|replace('+','-plus')|replace(' ','-') %}
-                    {% if name_sanitized in ['youtube', 'flickr', 'spotify', 'stack-overflow', 'weibo'] %}
-                    {% set iconattributes = 'fa fa-' ~ name_sanitized %}
-                    {% else %}
-                    {% set iconattributes = 'fa fa-' ~ name_sanitized ~ '-square' %}
-                    {% endif %}
-                    <li><i class="{{ iconattributes }}"></i> <a href="{{ link }}">{{ name }}</a></li>
-                    {% endfor %}
-                </ul>
-            </section>
-            {% endif %}
 
             <!-- Copyright -->
             <ul id="copyright">
@@ -197,6 +140,5 @@
         <!--[if lte IE 8]><script src="{{ SITEURL }}/theme/assets/js/ie/respond.min.js"></script><![endif]-->
         <script src="{{ SITEURL }}/theme/assets/js/main.js"></script>
         {% block script_hooks %}{% endblock %}
-        {% include 'analytics.html' %}
     </body>
 </html>
