@@ -1955,9 +1955,8 @@ article > ol {
       display: block;
       font-size: 1.5em;
       color: #1b252a;
-      border-bottom: solid 1px #ddd;
-      padding: 0 0 1em 0;
-      margin: 0 0 0.75em 0; }
+      padding: 0 0 0 0;
+      margin: 0 0 0 0; }
       .box.post .info .date .month span,
       .box.post .info .date .year span {
         display: none; }
