@@ -1,9 +1,11 @@
 {% if DEFAULT_PAGINATION %}
 <!-- Pagination -->
 <div class="pagination">
+
     {% if articles_page.has_previous() %}
     <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="button previous">Previous Page</a>
     {% endif %}
+
     <div class="pages">
     {% for i in range(1, articles_paginator.num_pages + 1) %}
         {% if i == articles_page.number %}
@@ -13,6 +15,7 @@
         {% endif %}
     {% endfor %}
     </div>
+
     {% if articles_page.has_next() %}
     <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="button next">Next Page</a>
     {% endif %}
