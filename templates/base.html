@@ -19,11 +19,11 @@
 
         <!-- Feeds -->
         {% if FEED_ALL_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom feed" />
         {% endif %}
 
         {% if FEED_ALL_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS feed" />
         {% endif %}
 
         <!-- Last minute CSS -->
@@ -97,14 +97,10 @@
 
             </nav>
 
-            <hr>
-
             <!-- Search -->
             <section class="box search">
                 <iframe src="https://duckduckgo.com/search.html?site=drwho.virtadpt.net&prefill=Search articles?" style="overflow:hidden;margin:0;padding:0;width:200px;height:40px;" frameborder="0"></iframe>
             </section>
-
-            <hr>
 
             <!-- Recent Posts -->
             <!--
