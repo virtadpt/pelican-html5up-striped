@@ -1950,11 +1950,11 @@ article > ol {
       position: relative;
       z-index: 1;
       font-family: 'Open Sans Condensed', sans-serif;
-      font-weight: 400;
+      font-weight: 700;
       text-align: center;
       display: block;
       font-size: 1.5em;
-      color: #999;
+      color: #1b252a;
       border-bottom: solid 1px #ddd;
       padding: 0 0 1em 0;
       margin: 0 0 0.75em 0; }
@@ -1970,7 +1970,7 @@ article > ol {
       .box.post .info .date .year {
         display: block;
         margin: 0.25em 0 0 0;
-        font-size: 0.5em; }
+        font-size: 1.0em; }
     .box.post .info .stats {
       position: relative;
       z-index: 1; }
