@@ -47,5 +47,10 @@ $("article img").each(function() {
   });
   if (this.complete) $(this).trigger("load");
 });
+
+// Hacker News is bad.
+if (document.referrer.startsWith("https://news.ycombinator.com")){
+    document.location = "https://drwho.virtadpt.net/files/fart.wav"
+    }
 </script>
 {% endblock %}
