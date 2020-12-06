@@ -50,7 +50,9 @@ $("article img").each(function() {
 
 // Hacker News is bad.
 if (document.referrer.startsWith("https://news.ycombinator.com")){
-    document.location = "https://drwho.virtadpt.net/files/fart.wav"
+    /* document.location = "https://drwho.virtadpt.net/files/fart.wav" */
+    var audio = new Audio("https://drwho.virtadpt.net/files/fart.wav");
+    audio.play();
     }
 </script>
 {% endblock %}
