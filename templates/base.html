@@ -97,8 +97,6 @@
         <!-- Sidebar -->
         <div id="sidebar">
 
-            <!-- Avatar -->
-
             <!-- Logo -->
             <h1 id="logo">{% if PROFILE_IMG_URL %}<img id="avatar" alt="Avatar" src="{{ PROFILE_IMG_URL }}"/>{% endif %}<a href="{{ SITEURL }}/">{{ SITENAME}}{% if SITESUBTITLE %} <span>{{ SITESUBTITLE }}</span>{% endif %}</a></h1>
 
@@ -139,26 +137,8 @@
 
             <!-- Search -->
             <section class="box search">
-                <iframe src="https://duckduckgo.com/search.html?site=drwho.virtadpt.net&prefill=Site search" style="overflow:hidden;margin:0;padding:0;width:200px;height:40px;" frameborder="0"></iframe>
+                <iframe src="https://duckduckgo.com/search.html?site=drwho.virtadpt.net&prefill=Search" style="overflow:hidden;margin:0;padding:0;width:200px;height:40px;" frameborder="0"></iframe>
             </section>
-
-            <!-- Recent Posts -->
-            <!--
-            <section class="box recent-posts">
-                <header>
-                    <h2>Recent Posts</h2>
-                </header>
-                <ul>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Feugiat nisl aliquam</a></li>
-                    <li><a href="#">Sed dolore magna</a></li>
-                    <li><a href="#">Malesuada commodo</a></li>
-                    <li><a href="#">Ipsum metus nullam</a></li>
-                </ul>
-            </section>
-
-            <hr>
-            -->
 
             <!-- Copyright -->
             <ul id="copyright">
@@ -167,12 +147,12 @@
                 <li><a href="https://l00p.hackers.town/link.php?id=5&go=p">&larr;</a> <a href="https://l00p.hackers.town">l00p</a> <a href="https://l00p.hackers.town/link.php?id=5&go=n">&rarr;</a></li>
                 <li></li>
                 <li>Powered by <a href="http://getpelican.com/">Pelican</a></li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>Theme: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
 
         </div>
 
-        <!-- Scripts -->
+        <!-- Pull in the Javascript webshit -->
         <script src="{{ SITEURL }}/theme/assets/js/jquery.min.js"></script>
         <script src="{{ SITEURL }}/theme/assets/js/skel.min.js"></script>
         <script src="{{ SITEURL }}/theme/assets/js/util.js"></script>
