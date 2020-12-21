@@ -44,7 +44,13 @@ $(function () {
 });
 </script>
 <script src="{{ SITEURL }}/theme/assets/js/konami.js"></script>
+<script>
+    window.NekoNoDefault = true;
+</script>
+<script src="https://webneko.net/n20171213.js"></script>
 <script type="text/javascript">
-    var hee = new Konami('/hee/index.html');
+    var kitteh = new Konami(function() {
+        startANeko()
+    });
 </script>
 {% endblock %}
