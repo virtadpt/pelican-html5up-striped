@@ -2,9 +2,9 @@
 
 /* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Open+Sans+Condensed:300,700|Inconsolata:400,700"); */
 
-/* @import url("Open-Sans-400-400italic-700_Open-Sans-Condensed-300-700_Inconsolata-400-700.css"); */
+@import url("Open-Sans-400-400italic-700_Open-Sans-Condensed-300-700_Inconsolata-400-700.css");
 
-@import url("Open-Sans-400-400italic-700_Open-Sans-Condensed-300-700_Inconsolata-400-700.degooglified.css");
+/* @import url("Open-Sans-400-400italic-700_Open-Sans-Condensed-300-700_Inconsolata-400-700.degooglified.css"); */
 
 /*
         Striped by HTML5 UP
@@ -1859,7 +1859,7 @@ article > ol {
   #logo {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.8em;
     letter-spacing: 0em;
     line-spacing: 110%; }
     #logo #avatar {
