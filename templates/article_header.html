@@ -1,14 +1,15 @@
     <header>
         <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">{{ article.title }}</a></h2>
 
-        <div>
         {% if article.tags %}
-            <i class="fa fa-tags"></i>&nbsp;
+        <!-- <i class="fa fa-tags"></i>&nbsp; -->
+        Tags:&nbsp;
+        <div class="tags">
             {% for tag in article.tags %}
                 <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a></span>
             {% endfor %}
-        {% endif %}
         </div>
+        {% endif %}
     </header>
 
     <div class="info">
