@@ -3,7 +3,7 @@
 
         {% if article.tags %}
         <div class="tags">
-            <i class="fa fa-tags"></i>
+            <!-- <i class="fa fa-tags"></i> -->
             {% for tag in article.tags %}
                 <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a></span>
             {% endfor %}
